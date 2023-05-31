@@ -4,10 +4,11 @@ import '../styles/color_style.dart';
 
 
 class BaseButton extends StatelessWidget {
-  const BaseButton({Key? key, required this.text, required this.onTap,this.enable = true}) : super(key: key);
+  const BaseButton({Key? key, required this.text, required this.onTap,this.enable = true, this.color}) : super(key: key);
   final String text;
   final VoidCallback onTap;
   final bool enable;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -18,7 +19,7 @@ class BaseButton extends StatelessWidget {
       },
       child: Container(
         decoration: BoxDecoration(
-          color: enable?Colors.deepPurple:disableColor,
+          color: enable?(color??Colors.deepPurple):disableColor,
           borderRadius: BorderRadius.circular(8)
         ),
         padding: const EdgeInsets.all(12),

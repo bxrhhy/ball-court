@@ -40,7 +40,8 @@ dependencies:
   icons_plus: ^4.0.0 #三方图标
   flutter_svg: ^2.0.6 #矢量图标
   loading_animation_widget: ^1.2.0+4 #loading动画
-  flutter_easyloading: ^3.0.5
+  flutter_easyloading: ^3.0.5 #toast
+  flutter_circular_text: ^0.3.1 #路径文字
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -82,6 +83,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: zcool
+      fonts:
+        - asset: assets/fonts/zcool.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

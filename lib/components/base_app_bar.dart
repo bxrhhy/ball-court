@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 ///自定义appbar
-baseAppBar(BuildContext context,{String? title,SystemUiOverlayStyle? style}){
+baseAppBar(BuildContext context,{String? title,SystemUiOverlayStyle? style,List<Widget>? actions}){
   return AppBar(
     title: Text(title??"",style: titleStyle,),
     centerTitle: true,
@@ -13,5 +13,6 @@ baseAppBar(BuildContext context,{String? title,SystemUiOverlayStyle? style}){
       onTap: ()=>Navigator.pop(context),
       child: const Icon(Icons.keyboard_arrow_left_rounded),
     ),
+    actions: actions,
   );
 }

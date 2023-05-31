@@ -8,6 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../config/routes.dart';
 import '../styles/text_style.dart';
 
+///底部中间+号弹窗
 class PublishDialog extends StatelessWidget {
   const PublishDialog({Key? key}) : super(key: key);
 
@@ -27,7 +28,10 @@ class PublishDialog extends StatelessWidget {
               title: "发布比赛",
               desc: "免费创建5v5比赛",
               iconPath: startGameSvg,
-              onTap: () => Navigator.pushNamed(context, Routes.startGamePage),
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.pushNamed(context, Routes.startGamePage);
+              },
             ),
             const SizedBox(
               height: 20,
@@ -48,6 +52,7 @@ class PublishDialog extends StatelessWidget {
               iconPath: countSvg,
               colors: gradientColors3,
               onTap: (){
+                Navigator.pop(context);
                 showModalBottomSheet(context: context, builder: (_)=>ClipRRect(
                     borderRadius: BorderRadius.circular(28),
                     child: const JudgePage()));

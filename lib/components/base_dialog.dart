@@ -8,17 +8,17 @@ class BaseDialog extends StatelessWidget {
     Key? key,
     required this.title,
     required this.content,
-    required this.cancelLabel,
+     this.cancelLabel,
     required this.confirmLabel,
-    required this.onCancel,
+     this.onCancel,
     required this.onConfirm,
   }) : super(key: key);
   final String title;
   final String content;
-  final String cancelLabel;
+  final String? cancelLabel;
   final String confirmLabel;
-  final Function(bool) onCancel;
-  final Function(bool) onConfirm;
+  final Function? onCancel;
+  final Function onConfirm;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class BaseDialog extends StatelessWidget {
           child: Container(
             width: double.infinity,
             margin: const EdgeInsets.symmetric(horizontal: 64),
-            padding: EdgeInsets.symmetric(horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white
@@ -44,13 +44,28 @@ class BaseDialog extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
+                    if(cancelLabel!=null)
+                      Expanded(
+                        child: BaseButton(
+                          color: Colors.grey,
+                            onTap: (){
+                              Navigator.pop(context);
+                              if(onCancel!=null){
+                                onCancel!();
+                              }
+                            },
+                            text: cancelLabel!
+                        ),
+                      ),
+                    if(cancelLabel!=null)
+                    const SizedBox(width: 12,),
+                      Expanded(
                       child: BaseButton(
                         onTap: (){
                           Navigator.pop(context);
-                          onConfirm(true);
+                          onConfirm();
                         },
-                        text: "知道了"
+                        text: confirmLabel??"知道了"
                       ),
                     )
                   ],
