@@ -352,8 +352,9 @@ class _StanderGamePageState extends State<StanderGamePage> {
           ),
         ),
         bottomNavigationBar: SingleChildScrollView(
-          child: SizedBox(
-            height: 45+MediaQuery.of(context).padding.bottom,
+          child: Container(
+            height: 45,
+            margin: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
             child: BaseButton(
               onTap: (){
                 if(teamNameController.text.isEmpty){
@@ -371,6 +372,7 @@ class _StanderGamePageState extends State<StanderGamePage> {
                 }
               },
               text: "下一步",
+              radius: 0,
             ),
           ),
         ),
