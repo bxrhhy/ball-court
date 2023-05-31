@@ -65,7 +65,7 @@ class BaseDialog extends StatelessWidget {
                           Navigator.pop(context);
                           onConfirm();
                         },
-                        text: confirmLabel??"知道了"
+                        text: confirmLabel
                       ),
                     )
                   ],

@@ -1,5 +1,4 @@
 import 'package:ball_court/components/base_dialog.dart';
-import 'package:ball_court/pages/profile_page/profile_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';

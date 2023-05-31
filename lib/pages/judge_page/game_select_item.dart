@@ -1,8 +1,4 @@
-import 'dart:ui';
-
-import 'package:ball_court/styles/color_style.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
 
 enum GameType { standard_5, fast_5, fast_4, fast_3, fast_1, custom }
 

@@ -4,7 +4,6 @@ import 'package:flutter_circular_text/circular_text/widget.dart';
 
 import '../../config/image_path.dart';
 import '../../models/player_model.dart';
-import '../../styles/color_style.dart';
 
 ///添加球员的卡片
 
