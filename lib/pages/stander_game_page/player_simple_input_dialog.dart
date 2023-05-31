@@ -31,8 +31,8 @@ class _PlayerSimpleInputDialogState extends State<PlayerSimpleInputDialog> {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12)
                   ),
-                  padding: EdgeInsets.all(12),
-                  margin: EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.all(12),
+                  margin: const EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
                     children: [
                       const Text("球员信息",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w800),),

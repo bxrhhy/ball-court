@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:ball_court/providers.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -49,7 +48,7 @@ class _WelcomePageState extends ConsumerState<WelcomePage> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: double.infinity,
             child: Image.asset("assets/images/ad_1.png",fit: BoxFit.fitWidth),
@@ -71,7 +70,7 @@ class _WelcomePageState extends ConsumerState<WelcomePage> {
                   decoration: BoxDecoration(
                       color: Colors.grey.withOpacity(0.3),
                       borderRadius: BorderRadius.circular(30)),
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   child: Text("跳过(${count}s)"),
                 ),
             ),

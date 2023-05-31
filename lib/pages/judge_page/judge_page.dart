@@ -88,7 +88,7 @@ class _JudgePageState extends State<JudgePage> {
                       }
                   ),
                 ),
-                SizedBox(width: 12,),
+                const SizedBox(width: 12,),
                 Expanded(
                   child: GameSelectorItem(
                       title: "自定义",

@@ -40,7 +40,7 @@ class AddPlayerCard extends StatelessWidget {
                       TextItem(
                           text: Text(
                             player.name??"",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'zcool',
                                 fontWeight:
